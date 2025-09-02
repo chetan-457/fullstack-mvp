@@ -10,7 +10,7 @@ const allowedOrigins = [
     'http://localhost:3001',
     'https://fullstack-mvp-r1vo-kwk4bxz1n-marwadichetan140-2519s-projects.vercel.app',
     'https://fullstack-mvp-745r.onrender.com',
-    'https://fullstack-mvp-r1vo-51og5t0v7-marwadichetan140-2519s-projects.vercel.app/'
+    'https://fullstack-mvp-r1vo-51og5t0v7-marwadichetan140-2519s-projects.vercel.app'
 ];
 
 var indexRouter = require('./routes/index');
