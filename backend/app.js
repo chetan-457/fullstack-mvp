@@ -5,12 +5,22 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const cors = require('cors');
 
+// Allow your Vercel frontend origin
+const allowedOrigins = [
+    'http://localhost:3001',
+    'https://fullstack-mvp-r1vo-kwk4bxz1n-marwadichetan140-2519s-projects.vercel.app'
+];
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 // var dbtestRouter = require('./routes/dbtest');
 var app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: allowedOrigins,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+}));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
