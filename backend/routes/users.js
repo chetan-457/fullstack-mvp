@@ -10,16 +10,8 @@
 
 // backend/routes/users.js
 const express = require('express');
+const pool = require('../db');
 const router = express.Router();
-const { Pool } = require('pg');
-
-const pool = new Pool({
-  user: 'user',
-  host: 'localhost',
-  database: 'mydb',
-  password: 'pass',
-  port: 5432,
-});
 
 router.get('/users', async (req, res) => {
   const { rows } = await pool.query('SELECT * FROM users');

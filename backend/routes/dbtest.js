@@ -1,15 +1,8 @@
 // backend/routes/dbtest.js
 const express = require('express');
+const pool = require('../db');
 const router = express.Router();
-const { Pool } = require('pg');
 
-const pool = new Pool({
-  user: 'user',
-  host: 'localhost',
-  database: 'mydb',
-  password: 'pass',
-  port: 5432,
-});
 
 router.get('/dbtest', async (req, res) => {
   try {

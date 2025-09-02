@@ -6,7 +6,7 @@ export default function Home() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/users")
+    fetch(`${process.env.NEXT_PUBLIC_API_BASE}/api/users`)
       .then(res => res.json())
       .then(data => setUsers(data));
   }, []);

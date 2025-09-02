@@ -1,3 +1,4 @@
+require('dotenv').config(); // 👈 add this at the top
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
