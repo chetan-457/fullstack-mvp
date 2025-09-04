@@ -7,10 +7,8 @@ const cors = require('cors');
 
 // Allow your Vercel frontend origin
 const allowedOrigins = [
-    'http://localhost:3001',
-    'https://fullstack-mvp-r1vo-kwk4bxz1n-marwadichetan140-2519s-projects.vercel.app',
-    'https://fullstack-mvp-745r.onrender.com',
-    'https://fullstack-mvp-r1vo-51og5t0v7-marwadichetan140-2519s-projects.vercel.app'
+    'http://localhost:3000',        // local Next.js
+    /\.vercel\.app$/                // deployed Next domain (regex via CORS v2 supports function; simple: set true in prod)
 ];
 
 var indexRouter = require('./routes/index');
